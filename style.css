@@ -1,0 +1,21 @@
+*{
+font-family: "Open Sans", sans-serif;
+}
+.containerClass{
+    display: flex;
+    width: max-content;
+    flex-direction: column;
+} 
+button{
+    padding: 30px 15px;
+    border: 3px solid black;
+    border-radius: 20px;
+} 
+p{
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
