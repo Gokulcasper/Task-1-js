@@ -17,11 +17,23 @@ btn3.style.backgroundColor="#56ccf2"
 let btn4 = document.getElementById("button4");
 btn4.style.backgroundColor="#bb6bd9"
 
-btn1.onClick = function(){
-    // ContainerE1.style.backgroundColor="#e0e0e0";
+function btn1Click(){
+    ContainerE1.style.backgroundColor="#e0e0e0";
     selectedColorHexCode.style.color="#e0e0e0";
 }
-console.log(ContainerE1)
+
+function btn2Click(){
+    ContainerE1.style.backgroundColor="#6fcf97";
+    selectedColorHexCode.style.color="#6fcf97";
+}
+function btn3Click(){
+    ContainerE1.style.backgroundColor="#56ccf2";
+    selectedColorHexCode.style.color="#56ccf2";
+}
+function btn4Click(){
+    ContainerE1.style.backgroundColor="#bb6bd9";
+    selectedColorHexCode.style.color="#bb6bd9";
+}
 
 
 
