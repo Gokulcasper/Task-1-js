@@ -5,7 +5,7 @@ let selectedColorHexCode = document.getElementById("selectedColorHexCode")
 selectedColorHexCode.style.color="#49a6e9"
 
 let btn1 = document.getElementById("button1");
-btn1.style.backgroundColor="#e0e0e0"
+btn1.style.backgroundColor="#e0e0e0";
 
 
 let btn2 = document.getElementById("button2");
@@ -17,22 +17,27 @@ btn3.style.backgroundColor="#56ccf2"
 let btn4 = document.getElementById("button4");
 btn4.style.backgroundColor="#bb6bd9"
 
+
 function btn1Click(){
     ContainerE1.style.backgroundColor="#e0e0e0";
     selectedColorHexCode.style.color="#e0e0e0";
+    selectedColorHexCode.textContent=btn1.innerText;
 }
 
 function btn2Click(){
     ContainerE1.style.backgroundColor="#6fcf97";
     selectedColorHexCode.style.color="#6fcf97";
+    selectedColorHexCode.textContent=btn2.innerText;
 }
 function btn3Click(){
     ContainerE1.style.backgroundColor="#56ccf2";
     selectedColorHexCode.style.color="#56ccf2";
+    selectedColorHexCode.textContent=btn3.innerText;
 }
 function btn4Click(){
     ContainerE1.style.backgroundColor="#bb6bd9";
     selectedColorHexCode.style.color="#bb6bd9";
+    selectedColorHexCode.textContent=btn4.innerText;
 }
 
 
