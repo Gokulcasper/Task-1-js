@@ -66,11 +66,7 @@ function btn4Click(){
 
 
 
-// let ContainerE1 = document.getElementById("containerId");
-// ContainerE1.classList.add("containerClass");
-
-// let ContainerE2 = document.getElementById("container2Btn");
-// ContainerE1.classList.add("containerClassBtn");
+// let ContainerE1 = document.getElementById("colorPickerContainer");
 
 // let h1Container = document.createElement("h1");
 // h1Container.textContent="Color Picker";
