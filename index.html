@@ -26,6 +26,8 @@
             <button onclick="btn3Click()" id="button3" class="colorContainerButton">#56ccf2</button>
             <button onclick="btn4Click()" id="button4" class="colorContainerButton">#bb6bd9</button>
             <p class="colorContainerP">Background Color : <span id="selectedColorHexCode">#fffff</span></p>
+            <p class="descriptionColorPicker">Try clicking on one of the colors above to change the background color of this page!</p>
+            <button onclick="normalcolorBtn()" class="normalColorBtn"></button>
             <!-- <button id="button1"></button>
             <button id="button2"></button>
             <button id="button3"></button>
@@ -81,8 +83,42 @@
 </div>
 </div>
 
-<!-- Tip Calculator  -->
+<hr>
 
+<!-- Tip Calculator  -->
+<div class="calculatorContainer">
+    <img src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396660/natural%20places/tip-calculator-img_qoayqf.png" alt="" width="400px" height="200px">
+    <h1 class="calculatorH1">Tip Calculator</h1>
+    <div class="formInput">
+        <label for="Bill">Bill Amount</label>
+        <input type="text" name="BAmount" class="inputTip" id="billAmount" value=" ">
+        <label for="percentage">Percentage Tip</label>
+        <input type="text" name="tipPercentage" class="inputTip" id="percentageTip" value=" ">
+        <label for="tipAmount">Tip Amount</label>
+        <input type="text" name="TAmount" class="inputTip" id="tipAmount">
+        <label for="total">Total</label>
+        <input type="text" name="Total" class="inputTip" id="totalAmount">
+    <button onclick="normalCalculatorBtn()" class="normalCalculatorBtn"></button>
+            <p class="error-message"></p>
+    </div>
+    <button class="calculateButton" id="calculateButton" onclick="calculateButton()">Calculate</button>
+</div>
+
+<hr>
+
+<!-- Sizing an Image -->
+
+<div class="sizingContainer">
+    <h1 class="sizingH1">Sizing An Image</h1>
+    <p>Increase the width of an image by clicking the plus button and decrease by clicking the minus button. For every action, the image increases or decreases by 5px.</p>
+    <img src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396816/natural%20places/sizing-an-image-img_l7gqxo.png" alt="" height="250px" width="250px">
+<p>Width : <span>250px</span> </p>
+<div>
+   <div>
+    <p> <span> - </span> | <span> 5px </span> | <span> + </span> </p>
+   </div>
+</div>
+</div>
 
     </center>
     <script src="./index.js"></script>

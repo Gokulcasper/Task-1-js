@@ -39,6 +39,20 @@ function btn4Click(){
     selectedColorHexCode.style.color="#bb6bd9";
     selectedColorHexCode.textContent=btn4.innerText;
 }
+
+function normalcolorBtn(){
+    ContainerE1.style.backgroundColor="#ffff";
+    ContainerE1.style.backgroundColor="#ffff";
+    ContainerE1.style.backgroundColor="#ffff";
+    ContainerE1.style.backgroundColor="#ffff";
+
+    selectedColorHexCode.style.color="#49a6e9";
+    selectedColorHexCode.style.color="#49a6e9";
+    selectedColorHexCode.style.color="#49a6e9";
+    selectedColorHexCode.style.color="#49a6e9";
+
+    selectedColorHexCode.textContent="#fffff";
+}
 // let ContainerE1 = document.getElementById("colorPickerContainer");
 
 // let h1Container = document.createElement("h1");
@@ -132,14 +146,14 @@ trafficBtn3.onclick=function(){
     trafficBtn2.style.color="white";
 }
 
-// function normalBtn(){
-//     readyLight .style.backgroundColor="#4b5069";
-//     stopLight .style.backgroundColor="#4b5069";
-//     goLight .style.backgroundColor="#4b5069";
-//     trafficBtn1.style.color="white";
-//     trafficBtn2.style.color="white";
-//     trafficBtn3.style.color="white";
-// }
+function normalBtn(){
+    readyLight .style.backgroundColor="#4b5069";
+    stopLight .style.backgroundColor="#4b5069";
+    goLight .style.backgroundColor="#4b5069";
+    trafficBtn1.style.color="white";
+    trafficBtn2.style.color="white";
+    trafficBtn3.style.color="white";
+}
 
 
 
@@ -171,3 +185,56 @@ imgBtn4.onclick=function(){
 function normalImgBtn(){
     SeasonMediumImage.src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684395858/natural%20places/seasons-switcher-four-seasons-xs-img_wxi4f3.png";
 }
+
+// ---------- Toggle Like and Unlike  ----------
+
+let puppyImage=document.getElementById("puppyImage");
+let likeIcon=document.getElementById("likeIcon");
+let likeButton=document.getElementById("likeButton");
+let likedImage="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396484/natural%20places/white-puppy-liked-img_wohqq2.png";
+likeButton.onclick=function(){
+    puppyImage.src=likedImage;
+    likeIcon.style.color="#0967d2";
+    likeButton.style.color="#0967d2";
+    likeButton.style.backgroundColor="white";
+    likeButton.textContent="Liked"
+    console.log(puppyImage);
+}
+function normalLikeBtn(){
+    puppyImage.src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396469/natural%20places/white-puppy-img_cjfliy.png";
+    likeIcon.style.color="#cbd2d9";
+    likeButton.style.color="#9aa5b1";
+    likeButton.style.backgroundColor="#cbd2d9";
+    likeButton.textContent="Like"
+}
+
+// ---------- Tip Calculator ---------------
+
+let tipAmount = document.getElementById("tipAmount");
+let totalAmount = document.getElementById("totalAmount");
+let calculateButton=document.getElementById("calculateButton");
+
+calculateButton.addEventListener('click',function(){
+let billAmount = document.getElementById("billAmount").value;
+let percentageTip = document.getElementById("percentageTip").value;
+let calculatedTip=(percentageTip/100)*billAmount;
+let calculatedTotal=parseInt(billAmount)+(calculatedTip);
+tipAmount.value=calculatedTip;
+totalAmount.value=calculatedTotal;
+});
+// function calculateButton(){
+//     let billAmount = document.getElementById("billAmount").value;
+//     let percentageTip = document.getElementById("percentageTip").value;
+//     let calculatedTip=(percentageTip/100)*billAmount;
+//     let calculatedTotal=parseInt(billAmount)+(calculatedTip);
+//     tipAmount.value=calculatedTip;
+//     totalAmount.value=calculatedTotal;
+// }
+function normalCalculatorBtn(){
+    billAmount.value="";
+    percentageTip.value="";
+    tipAmount.value="";
+    totalAmount.value="";
+}
+
+// ------------- Sizing An Image ----------
