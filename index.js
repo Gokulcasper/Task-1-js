@@ -142,3 +142,32 @@ trafficBtn3.onclick=function(){
 // }
 
 
+
+// ------ Season Switcher -----------
+
+let SeasonMediumImage = document.getElementById("seasonMediumImage");
+let imgBtn1 = document.getElementById("imgBtn1");
+let imgBtn2 = document.getElementById("imgBtn2");
+let imgBtn3 = document.getElementById("imgBtn3");
+let imgBtn4 = document.getElementById("imgBtn4");
+
+let imgSpring="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396063/natural%20places/seasons-switcher-spring-md-img_lwd2gw.png";
+let imgSummer="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396144/natural%20places/seasons-switcher-summer-md-img_ustin9.png";
+let imgAutunm="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396272/natural%20places/seasons-switcher-autumn-md-img_kmnmcu.png";
+let imgWinter="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396318/natural%20places/seasons-switcher-winter-md-img_z5awmm.png";
+
+imgBtn1.onclick=function(){
+    SeasonMediumImage.src=imgSpring;
+}
+imgBtn2.onclick=function(){
+    SeasonMediumImage.src=imgSummer;
+}
+imgBtn3.onclick=function(){
+    SeasonMediumImage.src=imgAutunm;
+}
+imgBtn4.onclick=function(){
+    SeasonMediumImage.src=imgWinter;
+}
+function normalImgBtn(){
+    SeasonMediumImage.src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684395858/natural%20places/seasons-switcher-four-seasons-xs-img_wxi4f3.png";
+}

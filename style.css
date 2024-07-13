@@ -1,8 +1,8 @@
 
 .containerClass{
-   height: 500px;
-   width: 500px;
-   padding-top: 70px;
+    height: 500px;
+    width: 500px;
+    padding-top: 70px;
 } 
 
 .colorContainerH1{
@@ -102,5 +102,65 @@ border: none;
     border: .5px solid white;
     background-color: #4b5069;
     margin-top: 280px;
+}
 
+/* Seasons Switcher */
+.containerImg{
+
+}
+.seasonImgH1{
+    font-family:  "Roboto", sans-serif;
+    font-size: 60px;
+    font-weight:700;
+    margin: 0 !important;
+    color: #222222;
+    padding-bottom: 20px;
+}
+.seasonImage{
+background-image: cover;
+height: 500px;
+}
+.imgButton{
+margin: 10px 0;
+}
+.imageButton1{
+    padding: 5px 28px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    margin: 10px;
+}
+.imageButton2{
+    padding: 5px 28px;
+    border-radius: 10px;
+    background-color: rgb(221, 203, 9);
+    color: white;
+    border: none;
+    margin: 10px;
+
+}
+.imageButton3{
+    padding: 5px 28px;
+    border-radius: 10px;
+    background-color: rgb(187, 36, 36);
+    color: white;
+    border: none;
+    margin: 10px;
+
+}
+.imageButton4{
+    padding: 5px 28px;
+    border-radius: 10px;
+    background-color: rgb(43, 117, 191);
+    color: white;
+    border: none;
+    margin: 10px;
+}
+.normalImgBtn{
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    border: .5px solid white;
+    background-color: #9a9ca6;
 }

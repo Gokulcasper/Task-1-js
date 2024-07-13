@@ -14,13 +14,11 @@
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet"> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
 <body>
     <center>
 
- <!-- COLOR PICKER -->
+<!-- COLOR PICKER -->
         <div id="colorPickerContainer">
             <h1 class="colorContainerH1">Color Picker</h1>
             <button onclick="btn1Click()" id="button1" class="colorContainerButton">#e0e0e0</button>
@@ -37,8 +35,8 @@
 
         <hr>
 
- <!-- Traffic Light -->
- <div class="trafficLightContainer">
+<!-- Traffic Light -->
+<div class="trafficLightContainer">
     <h1 class="trafficContainerH1">Traffic Light</h1>
     <div class="totalAlertContainer">
         <div class="alertButton">
@@ -47,16 +45,27 @@
             <button id="goButton">Go</button>
         </div>
         <!-- <button onclick="normalBtn()" class="normalBtn"></button> -->
-        
         <div class="lightIconContainer">
-            <!-- <div class="lightIcon"> -->
-              <button id="stopLight"></button>
-              <button id="readyLight"></button>
-              <button id="goLight"></button>
-            <!-- </div> -->
+            <button id="stopLight"></button>
+            <button id="readyLight"></button>
+            <button id="goLight"></button>
         </div>
     </div>
- </div>
+</div>
+
+<hr>
+<!-- Seasons Switcher -->
+<div class="containerImg">
+    <h1 class="seasonImgH1">Season Switcher</h1>
+    <img src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684395858/natural%20places/seasons-switcher-four-seasons-xs-img_wxi4f3.png" alt="" class="img-fluid seasonImage" id="seasonMediumImage" width="600px">
+    <div class="imgButton" id="img-Btn">
+<button id="imgBtn1" class="imageButton1" onclick="imgBtn1">Spring</button>
+<button id="imgBtn2" class="imageButton2" onclick="imgBtn2">Summer</button>
+<button id="imgBtn3" class="imageButton3" onclick="imgBtn3">Autunm</button>
+<button id="imgBtn4" class="imageButton4" onclick="imgBtn4">Winter</button>
+    </div>
+    <button onclick="normalImgBtn()" class="normalImgBtn"></button>
+</div>
     </center>
     <script src="./index.js"></script>
 </body>
