@@ -213,10 +213,12 @@ function normalLikeBtn(){
 let tipAmount = document.getElementById("tipAmount");
 let totalAmount = document.getElementById("totalAmount");
 let calculateButton=document.getElementById("calculateButton");
+let errorMessage=document.getElementById("errorMessage");
 
 calculateButton.addEventListener('click',function(){
 let billAmount = document.getElementById("billAmount").value;
 let percentageTip = document.getElementById("percentageTip").value;
+// let billAmount1=parseInt(billAmount);
 let calculatedTip=(percentageTip/100)*billAmount;
 let calculatedTotal=parseInt(billAmount)+(calculatedTip);
 tipAmount.value=calculatedTip;
@@ -225,11 +227,20 @@ totalAmount.value=calculatedTotal;
 // function calculateButton(){
 //     let billAmount = document.getElementById("billAmount").value;
 //     let percentageTip = document.getElementById("percentageTip").value;
-//     let calculatedTip=(percentageTip/100)*billAmount;
-//     let calculatedTotal=parseInt(billAmount)+(calculatedTip);
+// if(billAmount === " " )
+// {
+//     errorMessage.textContent="Please Enter Number";
+// }else if(percentageTip === " ")
+// {
+// errorMessage.textContent="Please Enter Number";
+// }else{
+//     let billAmount1=parseInt(billAmount);
+//     let percentageTip1=parseInt(percentageTip);
+//     let calculatedTip=(percentageTip1/100)*billAmount1;
+//     let calculatedTotal=billAmount1+calculatedTip;
 //     tipAmount.value=calculatedTip;
 //     totalAmount.value=calculatedTotal;
-// }
+// }};
 function normalCalculatorBtn(){
     billAmount.value="";
     percentageTip.value="";
@@ -238,3 +249,65 @@ function normalCalculatorBtn(){
 }
 
 // ------------- Sizing An Image ----------
+let sizingImg=document.getElementById("sizingImg");
+let decrementButton=document.getElementById("decrementButton");
+let incrementButton=document.getElementById("incrementButton");
+let imageWidth=document.getElementById("imageWidth");
+let warningMessage=document.getElementById("warningMessage");
+
+
+// function onIncrement(){
+
+// let previousImageWidth = parseInt(imageWidth.textContent);
+//     let updatedImageWidth=previousImageWidth+5;
+//     if (newWidth > 300) {
+//         warningMessage.textContent = "You are exceeding above 300px";
+//     } else {
+//         updatedImageWidth(newWidth);
+//         warningMessage.textContent = "";
+//     }
+// }
+
+// function onDecrement(){
+//     let previousImageWidth = imageWidth.textContent;
+//         let updatedImageWidth=parseInt(previousImageWidth)-5;
+//         if(updatedImageWidth < 100)
+//         {
+//         sizingImg.style.width = - 5;
+//         }
+//         else{
+//             warningMessage.textContent=" You Exceeding Above 300px"
+//         }
+//     }
+
+function updateImageWidth(newWidth) {
+    sizingImg.style.width = newWidth + 'px';
+    imageWidth.textContent = newWidth;
+}
+
+function onIncrement() {
+    let currentWidth = parseInt(imageWidth.textContent);
+    let newWidth = currentWidth + 5;
+
+    if (newWidth > 300) {
+        warningMessage.textContent = "You are exceeding above 300px";
+    } else {
+        updateImageWidth(newWidth);
+        warningMessage.textContent = "";
+    }
+}
+
+function onDecrement() {
+    let currentWidth = parseInt(imageWidth.textContent);
+    let newWidth = currentWidth - 5;
+
+    if (newWidth < 100) {
+        warningMessage.textContent = "You are decreasing below 100px";
+    } else {
+        updateImageWidth(newWidth);
+        warningMessage.textContent = "";
+    }
+}
+
+incrementButton.addEventListener('click', onIncrement);
+decrementButton.addEventListener('click', onDecrement);

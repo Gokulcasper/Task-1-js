@@ -1,126 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Picker</title> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="./style.css">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet"> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Picker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
     <center>
-
-<!-- COLOR PICKER -->
-        <div id="colorPickerContainer">
-            <h1 class="colorContainerH1">Color Picker</h1>
-            <button onclick="btn1Click()" id="button1" class="colorContainerButton">#e0e0e0</button>
-            <button onclick="btn2Click()" id="button2" class="colorContainerButton">#6fcf97</button>
-            <button onclick="btn3Click()" id="button3" class="colorContainerButton">#56ccf2</button>
-            <button onclick="btn4Click()" id="button4" class="colorContainerButton">#bb6bd9</button>
-            <p class="colorContainerP">Background Color : <span id="selectedColorHexCode">#fffff</span></p>
-            <p class="descriptionColorPicker">Try clicking on one of the colors above to change the background color of this page!</p>
-            <button onclick="normalcolorBtn()" class="normalColorBtn"></button>
-            <!-- <button id="button1"></button>
+      <!-- COLOR PICKER -->
+      <div id="colorPickerContainer">
+        <h1 class="colorContainerH1">Color Picker</h1>
+        <button onclick="btn1Click()" id="button1" class="colorContainerButton">
+          #e0e0e0
+        </button>
+        <button onclick="btn2Click()" id="button2" class="colorContainerButton">
+          #6fcf97
+        </button>
+        <button onclick="btn3Click()" id="button3" class="colorContainerButton">
+          #56ccf2
+        </button>
+        <button onclick="btn4Click()" id="button4" class="colorContainerButton">
+          #bb6bd9
+        </button>
+        <p class="colorContainerP">
+          Background Color : <span id="selectedColorHexCode">#fffff</span>
+        </p>
+        <p class="descriptionColorPicker">
+          Try clicking on one of the colors above to change the background color
+          of this page!
+        </p>
+        <button onclick="normalcolorBtn()" class="normalColorBtn"></button>
+        <!-- <button id="button1"></button>
             <button id="button2"></button>
             <button id="button3"></button>
             <button id="button4"></button>
             <p ><span id="selectedColorHexCode"></span></p> -->
-        </div>
+      </div>
 
-        <hr>
+      <hr />
 
-<!-- Traffic Light -->
-<div class="trafficLightContainer">
-    <h1 class="trafficContainerH1">Traffic Light</h1>
-    <div class="totalAlertContainer">
-        <div class="alertButton">
+      <!-- Traffic Light -->
+      <div class="trafficLightContainer">
+        <h1 class="trafficContainerH1">Traffic Light</h1>
+        <div class="totalAlertContainer">
+          <div class="alertButton">
             <button id="stopButton">Stop</button>
             <button id="readyButton">Ready</button>
             <button id="goButton">Go</button>
-        </div>
-        <button onclick="normalBtn()" class="normalBtn"></button>
-        <div class="lightIconContainer">
+          </div>
+          <button onclick="normalBtn()" class="normalBtn"></button>
+          <div class="lightIconContainer">
             <button id="stopLight"></button>
             <button id="readyLight"></button>
             <button id="goLight"></button>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
-<hr>
+      <hr />
 
-<!-- Seasons Switcher -->
-<div class="containerImg">
-    <h1 class="seasonImgH1">Season Switcher</h1>
-    <img src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684395858/natural%20places/seasons-switcher-four-seasons-xs-img_wxi4f3.png" alt="" class="img-fluid seasonImage" id="seasonMediumImage" width="600px">
-    <div class="imgButton" id="img-Btn">
-<button id="imgBtn1" class="imageButton1" onclick="imgBtn1">Spring</button>
-<button id="imgBtn2" class="imageButton2" onclick="imgBtn2">Summer</button>
-<button id="imgBtn3" class="imageButton3" onclick="imgBtn3">Autunm</button>
-<button id="imgBtn4" class="imageButton4" onclick="imgBtn4">Winter</button>
-    </div>
-    <button onclick="normalImgBtn()" class="normalImgBtn"></button>
-</div>
+      <!-- Seasons Switcher -->
+      <div class="containerImg">
+        <h1 class="seasonImgH1">Season Switcher</h1>
+        <img
+          src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684395858/natural%20places/seasons-switcher-four-seasons-xs-img_wxi4f3.png"
+          alt=""
+          class="img-fluid seasonImage"
+          id="seasonMediumImage"
+          width="600px"
+        />
+        <div class="imgButton" id="img-Btn">
+          <button id="imgBtn1" class="imageButton1" onclick="imgBtn1">
+            Spring
+          </button>
+          <button id="imgBtn2" class="imageButton2" onclick="imgBtn2">
+            Summer
+          </button>
+          <button id="imgBtn3" class="imageButton3" onclick="imgBtn3">
+            Autunm
+          </button>
+          <button id="imgBtn4" class="imageButton4" onclick="imgBtn4">
+            Winter
+          </button>
+        </div>
+        <button onclick="normalImgBtn()" class="normalImgBtn"></button>
+      </div>
 
-<hr>
+      <hr />
 
-<!-- Toggle Like and Unlike -->
-<div class="toggleContainer">
-    <h1 class="toggleH1Container">Toggle Like and Unlike</h1>
-<img src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396469/natural%20places/white-puppy-img_cjfliy.png" alt="" id="puppyImage"  width="600px">
-<div class="likeContainer">
-    <Span><i class="ri-thumb-up-fill likeFinger" id="likeIcon"></i></Span>
-<button id="likeButton" class="likeBtn">Like</button>
-<button onclick="normalLikeBtn()" class="normalLikeBtn"></button>
-</div>
-</div>
+      <!-- Toggle Like and Unlike -->
+      <div class="toggleContainer">
+        <h1 class="toggleH1Container">Toggle Like and Unlike</h1>
+        <img
+          src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396469/natural%20places/white-puppy-img_cjfliy.png"
+          alt=""
+          id="puppyImage"
+          width="600px"
+        />
+        <div class="likeContainer">
+          <span><i class="ri-thumb-up-fill likeFinger" id="likeIcon"></i></span>
+          <button id="likeButton" class="likeBtn">Like</button>
+          <button onclick="normalLikeBtn()" class="normalLikeBtn"></button>
+        </div>
+      </div>
 
-<hr>
+      <hr />
 
-<!-- Tip Calculator  -->
-<div class="calculatorContainer">
-    <img src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396660/natural%20places/tip-calculator-img_qoayqf.png" alt="" width="400px" height="200px">
-    <h1 class="calculatorH1">Tip Calculator</h1>
-    <div class="formInput">
-        <label for="Bill">Bill Amount</label>
-        <input type="text" name="BAmount" class="inputTip" id="billAmount" value=" ">
-        <label for="percentage">Percentage Tip</label>
-        <input type="text" name="tipPercentage" class="inputTip" id="percentageTip" value=" ">
-        <label for="tipAmount">Tip Amount</label>
-        <input type="text" name="TAmount" class="inputTip" id="tipAmount">
-        <label for="total">Total</label>
-        <input type="text" name="Total" class="inputTip" id="totalAmount">
-    <button onclick="normalCalculatorBtn()" class="normalCalculatorBtn"></button>
-            <p class="error-message"></p>
-    </div>
-    <button class="calculateButton" id="calculateButton" onclick="calculateButton()">Calculate</button>
-</div>
+      <!-- Tip Calculator  -->
+      <div class="calculatorContainer">
+        <img
+          src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396660/natural%20places/tip-calculator-img_qoayqf.png"
+          alt=""
+          width="400px"
+          height="200px"
+        />
+        <h1 class="calculatorH1">Tip Calculator</h1>
+        <div class="formInput">
+          <label for="Bill">Bill Amount</label>
+          <input
+            type="text"
+            name="BAmount"
+            class="inputTip"
+            id="billAmount"
+            value=" "
+          />
+          <label for="percentage">Percentage Tip</label>
+          <input
+            type="text"
+            name="tipPercentage"
+            class="inputTip"
+            id="percentageTip"
+            value=" "
+          />
+          <label for="tipAmount">Tip Amount</label>
+          <input type="text" name="TAmount" class="inputTip" id="tipAmount" />
+          <label for="total">Total</label>
+          <input type="text" name="Total" class="inputTip" id="totalAmount" />
+          <button
+            onclick="normalCalculatorBtn()"
+            class="normalCalculatorBtn"
+          ></button>
+          <p id="errorMessage"></p>
+        </div>
+        <button
+          class="calculateButton"
+          id="calculateButton"
+          onclick="calculateButton()"
+        >
+          Calculate
+        </button>
+      </div>
 
-<hr>
+      <hr />
 
-<!-- Sizing an Image -->
+      <!-- Sizing an Image -->
 
-<div class="sizingContainer">
-    <h1 class="sizingH1">Sizing An Image</h1>
-    <p>Increase the width of an image by clicking the plus button and decrease by clicking the minus button. For every action, the image increases or decreases by 5px.</p>
-    <img src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396816/natural%20places/sizing-an-image-img_l7gqxo.png" alt="" height="250px" width="250px">
-<p>Width : <span>250px</span> </p>
-<div>
-   <div>
-    <p> <span> - </span> | <span> 5px </span> | <span> + </span> </p>
-   </div>
-</div>
-</div>
+      <div class="sizingContainer">
+        <h1 class="sizingH1">Sizing An Image</h1>
+        <p class="sizingContent">
+          Increase the width of an image by clicking the plus button and
+          decrease by clicking the minus button. For every action, the image
+          increases or decreases by 5px.
+        </p>
+        <img
+          src="https://res.cloudinary.com/dhpkv1tec/image/upload/v1684396816/natural%20places/sizing-an-image-img_l7gqxo.png"
+          alt=""
+          height="200px"
+          width="200px"
+          id="sizingImg"
+        />
+        <p class="image-width-p">
+          Width : <span class="image-width" id="imageWidth">200</span>px
+        </p>
+        <div>
+          <div>
+            <p class="btnIncDec">
+              <span id="decrementButton" onclick="onDecrement()" style="padding-right: 15px"> - </span>
+              | <span id="change5px"> 5px </span> |
+              <span id="incrementButton" onclick="onIncrement()" style="padding-left: 15px"> + </span>
+            </p>
+          </div>
+        </div>
+        <p id="warningMessage" class="warning-message"></p>
+      </div>
 
+      <hr />
     </center>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
